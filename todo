@@ -1,0 +1,5 @@
+- add providers 
+- scrape 1y of data each (source.scrape-news and scraped-data)
+- group news (source.group-news)
+- create news title (source.generate-title)
+- return 20 news groups on each request (source.main)
