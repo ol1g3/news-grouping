@@ -3,3 +3,8 @@
 - group news (source.group-news)
 - create news title (source.generate-title)
 - return 20 news groups on each request (source.main)
+
+-make setup for dev/prod 
+ - sql
+ - nginx
+ - django
