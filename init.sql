@@ -1,2 +1,2 @@
-CREATE DATABASE grouping_news;
+CREATE DATABASE IF NOT EXISTS grouping_news;
 USE grouping_news;

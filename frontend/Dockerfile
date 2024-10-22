@@ -7,11 +7,11 @@ WORKDIR /app/frontend
 COPY ./package.json /app/frontend//package.json
 COPY ./package-lock.json /app/frontend/package-lock.json
 
-RUN yarn install
+RUN npm install
 COPY . .
-RUN yarn build
+RUN npm run build
 
 
 FROM nginx
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/frontend/build /usr/share/nginx/html

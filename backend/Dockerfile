@@ -17,8 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire Django project into the container
 COPY . /app/backend/
 
-VOLUME /home/app/backend/static
+VOLUME /home/app/backend/news_grouping/static
 
-CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && gunicorn backend.wsgi:application --bind 0.0.0.0:${APP_PORT}"]
+CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && gunicorn news_grouping.wsgi:application --bind 0.0.0.0:${APP_PORT}"]
 
 EXPOSE ${APP_PORT}
